@@ -1,0 +1,8 @@
+This project demonstrates how typescript modules and classes can be used to implement TypeScript code in the famous 
+Hot Towel project template by John Papa.
+
+Unfortunenly there are still small problems by intergrating TypeScript classes with Durandal.
+This example shows how this can be acheived for curent version of TypeScript (0.8.3)
+According to some blogs this issu is to be resolved in later versions of TypeScript.
+
+Until then this is how it can be done without messing with the Durandal router system.
