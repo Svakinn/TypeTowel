@@ -2,12 +2,11 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
     var _logger = ___logger__;
 
     var ViewModel = (function () {
-        function ViewModel() { }
-        ViewModel.prototype.title = function () {
-            return 'Home View';
-        };
+        function ViewModel() {
+            this.title = 'Home View';
+        }
         ViewModel.prototype.activate = function () {
-            this.MyTitle = this.title() + ' with my title';
+            this.MyTitle = ko.observable(this.title + " with my ko title");
             _logger.logger.log('We are home now', null, 'home', true);
             return true;
         };
@@ -15,7 +14,7 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
     })();
     exports.ViewModel = ViewModel;    
     exports.vm = new ViewModel();
-    exports.title = exports.vm.title();
+    exports.title = exports.vm.title;
     exports.activate = function () {
         return exports.vm.activate();
     };

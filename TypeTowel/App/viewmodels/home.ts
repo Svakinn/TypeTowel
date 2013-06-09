@@ -1,10 +1,11 @@
+/// <reference path="../../dts/knockout/knockout.d.ts" />
 import _logger = module('services/logger');
 
 export class ViewModel {
-    public title() { return 'Home View'; }
-    MyTitle: string; //MyTitle can be referenced in home.html as vm.MyTitle
+    title: string =  'Home View';
+    MyTitle: KnockoutObservableString; //MyTitle can be referenced in home.html as vm.MyTitle
     public activate() {
-        this.MyTitle = this.title()+' with my title';
+        this.MyTitle = ko.observable(this.title + " with my ko title");
         _logger.logger.log('We are home now', null, 'home', true);
         return true;
     }
@@ -12,6 +13,6 @@ export class ViewModel {
 export var vm = new ViewModel();
 
 //The Durandal plugin-interface variables
-export var title = vm.title();
+export var title = vm.title;
 export var activate = function () { return vm.activate(); };
 
