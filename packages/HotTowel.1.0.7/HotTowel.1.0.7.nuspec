@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>HotTowel</id>
+    <version>1.0.7</version>
+    <title>HotTowel: ASP.NET MVC SPA Template</title>
+    <authors>John Papa</authors>
+    <owners>John Papa</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/johnpapa/HotTowel</projectUrl>
+    <iconUrl>http://www.johnpapa.net/wp-content/images/towelicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Want to build a SPA but can't decide where to start? Use Hot Towel and in seconds you'll have a SPA and all the tools you need to build on it! 
+
+* Use Hot Towel for ASP.NET MVC
+* Use Hot Towelette for ASP.NET (no MVC required)
+
+Hot Towel creates a great starting point for building a SPA with ASP.NET MVC, Knockout for data bindings, Durandal for navigation and UI, and Breeze for data management.
+
+Hot Towel also adds pop-up toasts with Toastr, date formatting with Moment, styling with Twitter Bootstrap, and browser history integration with Durandal.Router.
+
+Hot Towel: Because you don't want to go to the SPA without one!
+
+* Hot Towel and Hot Towelette are shown in the SPA JumpStart course at www.pluralsight.com</description>
+    <summary>Quick and easy SPA Template for building a SPA with ASP.NET MVC, Knockout, Durandal, and Breeze.</summary>
+    <releaseNotes>Added _references.js for intellisense in Visual Studio. Added Knockout data-bind starting point to the views. Cleaned code from shell.js.</releaseNotes>
+    <copyright>Copyright © 2013 John Papa</copyright>
+    <language>en-US</language>
+    <tags>spa asp.net jquery knockout toastr breeze sammy q javascript moment</tags>
+    <dependencies>
+      <dependency id="Breeze.WebApi" version="1.1.2" />
+      <dependency id="Durandal" version="1.1.1" />
+      <dependency id="Durandal.Router" version="1.1.1" />
+      <dependency id="Durandal.Transitions" version="1.1.1" />
+      <dependency id="jQuery" version="1.9.1" />
+      <dependency id="knockoutjs" version="2.2.1" />
+      <dependency id="Moment.js" version="1.7.2" />
+      <dependency id="toastr" version="1.2.2" />
+      <dependency id="Twitter.Bootstrap" version="2.2.2" />
+      <dependency id="Microsoft.AspNet.WebApi" version="4.0.20710.0" />
+      <dependency id="Microsoft.AspNet.Razor" version="2.0.20715.0" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.0.0" />
+      <dependency id="WebActivator" version="1.5.3" />
+    </dependencies>
+  </metadata>
+</package>
