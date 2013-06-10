@@ -11,10 +11,11 @@ Until then this is how it can be done without messing with the Durandal router s
 
 
 Requirements:
-VSS2012
+VS2012
 Web Essentials plugin
 TypeScript
+Compile Typescript with AMD option to true
 
 Pleae note:
 For the TypeScripts to work we must configure TypeScript to use the AMD module
-In VSS2012 open Tools-Options, open Web Essentials section and set the "Use the AMD module" option to True.
+In VS2012 open Tools-Options, open Web Essentials section and set the "Use the AMD module" option to True.
