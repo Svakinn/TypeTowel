@@ -12,11 +12,12 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
         };
         return ViewModel;
     })();
-    exports.ViewModel = ViewModel;    
+    exports.ViewModel = ViewModel;
     exports.vm = new ViewModel();
+
     exports.title = exports.vm.title;
     exports.activate = function () {
         return exports.vm.activate();
     };
-})
+});
 //@ sourceMappingURL=home.js.map

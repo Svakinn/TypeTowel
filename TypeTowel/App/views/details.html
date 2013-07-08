@@ -1,3 +1,8 @@
 ﻿<section>
-    <h2 class="page-title" data-bind="text: title"></h2>
+    <h2 class="page-title" data-bind="text: vm.title"></h2>
+    <button data-bind="click: vm.clickUpdatTitle.bind(vm,'My new updated title')">Update the title</button>
+    <h2 data-bind="text: 'List of our '+vm.countries().length+' countries:'"></h2>
+    <ul data-bind="foreach: vm.countries">
+        <li data-bind="text: id+' - '+name"></li>
+    </ul>
 </section>

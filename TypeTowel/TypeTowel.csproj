@@ -180,6 +180,10 @@
     <Content Include="App\durandal\viewModel.js" />
     <Content Include="App\durandal\viewModelBinder.js" />
     <Content Include="App\durandal\widget.js" />
+    <None Include="Scripts\jquery-2.0.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.2.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.map" />
     <TypeScriptCompile Include="App\main.ts" />
     <Content Include="App\main.js">
       <DependentUpon>main.ts</DependentUpon>
@@ -208,7 +212,6 @@
     <Content Include="App\viewmodels\home.min.js">
       <DependentUpon>home.ts</DependentUpon>
     </Content>
-    <Content Include="App\viewmodels\homeOld.js" />
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />
     <Content Include="App\viewmodels\shell.js">
       <DependentUpon>shell.ts</DependentUpon>
@@ -234,18 +237,6 @@
     <Content Include="Content\images\icon.png" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
-    <Content Include="dts\Q\Q-tests.ts" />
-    <Content Include="dts\Q\Q.d.ts" />
-    <Content Include="dts\Q\q.module-tests.ts" />
-    <Content Include="dts\Q\q.module.d.ts" />
-    <Content Include="dts\requirejs\require-tests.js">
-      <DependentUpon>require-tests.ts</DependentUpon>
-    </Content>
-    <Content Include="dts\requirejs\require-tests.min.js">
-      <DependentUpon>require-tests.ts</DependentUpon>
-    </Content>
-    <Content Include="dts\requirejs\require-tests.ts" />
-    <Content Include="dts\requirejs\require.d.ts" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="App\services\logger.js.map">
@@ -254,12 +245,8 @@
     <Content Include="App\viewmodels\shell.js.map">
       <DependentUpon>shell.ts</DependentUpon>
     </Content>
-    <Content Include="dts\requirejs\README.md" />
     <Content Include="App\main.js.map">
       <DependentUpon>main.ts</DependentUpon>
-    </Content>
-    <Content Include="dts\requirejs\require-tests.js.map">
-      <DependentUpon>require-tests.ts</DependentUpon>
     </Content>
     <Content Include="App\main.min.js.map">
       <DependentUpon>main.js</DependentUpon>
@@ -270,14 +257,11 @@
     <Content Include="App\viewmodels\home.js.map">
       <DependentUpon>home.ts</DependentUpon>
     </Content>
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -289,12 +273,17 @@
     <Content Include="Scripts\sammy-0.7.4.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
+    <Content Include="Scripts\typings\durandal\durandal.d.ts" />
+    <Content Include="Scripts\typings\jqueryui\jqueryui.d.ts" />
+    <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\knockout.mapping\knockout.mapping.d.ts" />
+    <Content Include="Scripts\typings\knockout\knockout.amd.d.ts" />
+    <Content Include="Scripts\typings\knockout\knockout.d.ts" />
+    <Content Include="Scripts\typings\q\Q.d.ts" />
+    <Content Include="Scripts\typings\requirejs\require.d.ts" />
+    <Content Include="Scripts\typings\toastr\toastr.d.ts" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="dts\durandal\durandal.d.ts" />
-    <Content Include="dts\jquery\jquery.d.ts" />
-    <Content Include="dts\knockout\knockout.d.ts" />
-    <Content Include="dts\toastr\toastr-tests.ts" />
-    <Content Include="dts\toastr\toastr.d.ts" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -302,7 +291,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\HotTowel\index.cshtml" />
     <Content Include="Views\HotTowel\_splash.cshtml" />

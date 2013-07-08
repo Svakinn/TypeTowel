@@ -1,21 +1,11 @@
-Do you love the Hot Towel SPA template by John Papa ?
-Do you like TypeScript ?
+Do you love the Hot Towel SPA template by John Papa ? 
+Do you like TypeScript ? 
+Would you like to implement your viewmodel classes of Hot Towel in TypeScript ? 
+This project demonstrates how to do just that. It includes a blank Hot Towel project that has been converted to use TypeScript for the view models. 
 
-Would you like to implement your viewmodel classes of Hot Towel in TypeScript ?
+Requirements: 
+VS2012 Web Essentials plugin 
+TypeScript - latest version (0.9.1) 
+Compile Typescript with AMD option to true 
 
-This project demonstrates how to do just that.  It includes a blank Hot Towel project that has been converted to use TypeScript for the view models.
-Unfortunately there are still small problems by integrating properly current version of TypeScript (0.8.3) with Durandal.  
-According to some blogs this issue is to be resolved in later versions of TypeScript.
-
-Until then this is how it can be done without messing with the Durandal router system.
-
-
-Requirements:
-VS2012
-Web Essentials plugin
-TypeScript
-Compile Typescript with AMD option to true
-
-Pleae note:
-For the TypeScripts to work we must configure TypeScript to use the AMD module
-In VS2012 open Tools-Options, open Web Essentials section and set the "Use the AMD module" option to True.
+Pleae note: For the TypeScripts to work we must configure TypeScript to use the AMD module In VS2012 open Tools-Options, open Web Essentials section and set the "Use the AMD module" option to True. 

@@ -1,5 +1,6 @@
-/// <reference path="../../dts/toastr/toastr.d.ts" />
-/// <reference path="../../dts/durandal/durandal.d.ts" />
+/// <reference path="../../Scripts/typings/toastr/toastr.d.ts" />
+/// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
+
 import _system = module('durandal/system');
 export class loggerClass {
 

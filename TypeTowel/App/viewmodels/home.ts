@@ -1,9 +1,10 @@
-/// <reference path="../../dts/knockout/knockout.d.ts" />
+/// <reference path="../../Scripts/typings/knockout/knockout.d.ts" />
+
 import _logger = module('services/logger');
 
 export class ViewModel {
     title: string =  'Home View';
-    MyTitle: KnockoutObservableString; //MyTitle can be referenced in home.html as vm.MyTitle
+    MyTitle: KnockoutObservable<string>; //MyTitle can be referenced in home.html as vm.MyTitle
     public activate() {
         this.MyTitle = ko.observable(this.title + " with my ko title");
         _logger.logger.log('We are home now', null, 'home', true);
