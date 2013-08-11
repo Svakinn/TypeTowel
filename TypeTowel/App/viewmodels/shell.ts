@@ -1,30 +1,30 @@
 /// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
 
+import _router = require('durandal/plugins/router');
+import _logger = require('services/logger');
+import _system = require('durandal/system');
 
-import _router = module('durandal/plugins/router');
-//import _app = module('durandal/app');
-import _logger = module('services/logger');
-import _system = module('durandal/system');
-
-export var router = _router;
-export var shell = {
+var shell = {
     activate: activate,
-    router: router
+    router: _router
 }
-export function activate() {
+return shell;
+
+//#region Internal Methods
+function activate() {
     return boot();
 }
 
-//#region Internal Methods
 function boot() {
-    router.mapNav('home');
-    router.mapNav('details');
+    _router.mapNav('home');
+    _router.mapNav('details');
     log('Hot Towel SPA Loaded!', null, true);
-    return router.activate('home');
+    return _router.activate('home');
 }
 
 function log(msg, data, showToast) {
     _logger.logger.log(msg, data, _system.getModuleId(shell), showToast);
 }
 //#endregion
+
 

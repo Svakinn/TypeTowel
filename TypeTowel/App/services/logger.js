@@ -1,3 +1,5 @@
+/// <reference path="../../Scripts/typings/toastr/toastr.d.ts" />
+/// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
 define(["require", "exports", 'durandal/system'], function(require, exports, ___system__) {
     var _system = ___system__;
     var loggerClass = (function () {
@@ -32,4 +34,4 @@ define(["require", "exports", 'durandal/system'], function(require, exports, ___
 
     exports.logger = new loggerClass();
 });
-//@ sourceMappingURL=logger.js.map
+//# sourceMappingURL=logger.js.map

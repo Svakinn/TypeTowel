@@ -4,8 +4,15 @@ Would you like to implement your viewmodel classes of Hot Towel in TypeScript ?
 This project demonstrates how to do just that. It includes a blank Hot Towel project that has been converted to use TypeScript for the view models. 
 
 Requirements: 
-VS2012 Web Essentials plugin 
-TypeScript - latest version (0.9.1) 
-Compile Typescript with AMD option to true 
+1) Visual studio 2012 or 2013
 
-Pleae note: For the TypeScripts to work we must configure TypeScript to use the AMD module In VS2012 open Tools-Options, open Web Essentials section and set the "Use the AMD module" option to True. 
+2) VS2012 Web Essentials plugin.  NOTE !! Latest version of Web Essentials, 2.9 has problems with Typescript AMD at the moment.
+Use older version i.e. 2.7: http://vswebessentials.com/nightly/webessentials2012-2.7.vsixor or the "Nightly builds"
+See: http://vswebessentials.com/download and follow instructions there to set-up the Nightly builds update into Visual studio.
+
+3) Compile Typescript with AMD option to true.
+TypeScript must be configured to compile as AMD JavaScript.  To make sure, open Tools-Options in Visual Studio, then open Web Essentials section and set the "Use the AMD module" option to True.
+
+Finally;
+Please do not update the Durandal or Bootstrap packages in this project (using NuGet Package Manager).
+The same applies for the current version of the HotTowel project template.  

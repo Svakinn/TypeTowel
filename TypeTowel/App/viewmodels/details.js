@@ -1,39 +1,63 @@
+/// <reference path="../../Scripts/typings/bootstrap/bootstrap.d.ts" />
+/// <reference path="../../Scripts/typings/knockout/knockout.d.ts" />
 define(["require", "exports", 'services/logger'], function(require, exports, ___logger__) {
     var _logger = ___logger__;
     
 
+    //The typescript viewmodel class
     var DetailsView = (function () {
         function DetailsView() {
             this.title = ko.observable('');
-            this.countries = ko.observableArray([]);
+            this.countries = ko.observableArray();
+            //Note that computeds and subscriptions should be initialized in constructor or activate function in typescript viewmodel class
+            this.compTitle = ko.computed(function () {
+                return this.title() + ' (computed)';
+            }, this);
         }
+        //Remember to include the viewmodel as the first parameter of the knockout binding to have it function as a member function of the class
+        //See the details.html
+        DetailsView.prototype.clickUpdatTitle = function (newTitle) {
+            this.title(newTitle);
+        };
+
+        DetailsView.prototype.activateToolTips = function () {
+            //Bootstrap tooltips must be initialized after html elements have been rendered on page
+            //(after knockout bindings have been applied)
+            $('.toolTip').tooltip();
+        };
+
+        //Implementation of Durandal interface within the viewmodel
         DetailsView.prototype.activate = function () {
             this.title('My title');
             _logger.logger.log('Details View Activated', null, 'details', true);
-            exports.vm.countries.push({ id: 'IS', name: 'Iceland' });
+            exports.vm.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
+
+            //Note: remember that when waiting for data i.e. from service query, the promise should be returned instead of the "true" value
             return true;
         };
-
-        DetailsView.prototype.clickUpdatTitle = function (newTitle) {
-            this.title(newTitle);
+        DetailsView.prototype.viewAttached = function (view) {
+            this.activateToolTips();
         };
         return DetailsView;
     })();
     exports.DetailsView = DetailsView;
 
+    //Export oru viewmodel to the DOM as vm
     exports.vm = new DetailsView();
 
-    exports.displayName = exports.vm.title();
-    exports.title = exports.vm.title();
-    exports.activate = _activate;
-
-    function _activate() {
+    //The Durandal plugin-interface
+    exports.activate = function () {
         return exports.vm.activate();
-    }
+    };
+    exports.viewAttached = function (view) {
+        exports.vm.viewAttached(view);
+    };
 
+    //Finally some timeout update to the countries to demonstrate knockout capabilities on updating observable data
     setTimeout(function () {
-        exports.vm.countries.push({ id: 'GB', name: 'Great Britain' });
-        exports.vm.countries.push({ id: 'US', name: 'United states' });
+        exports.vm.countries.push({ id: 'GB', name: ko.observable('Great Britain'), toolTip: ko.observable('Home of Soccer') });
+        exports.vm.countries.push({ id: 'US', name: ko.observable('United states'), toolTip: ko.observable('Hmm?') });
+        exports.vm.activateToolTips();
     }, 5000);
 });
-//@ sourceMappingURL=details.js.map
+//# sourceMappingURL=details.js.map

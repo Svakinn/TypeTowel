@@ -1,8 +1,6 @@
-/// <reference path="../dts/Q/Q.d.ts" />
-/// <reference path="viewmodels/shell.ts" />
-/// <reference path="../dts/toastr/toastr.d.ts" />
-/// <reference path="../dts/durandal/durandal.d.ts" />
-/// <reference path="../dts/requirejs/require.d.ts" />
+/// <reference path="../Scripts/typings/toastr/toastr.d.ts" />
+/// <reference path="../Scripts/typings/requirejs/require.d.ts" />
+
 require.config({
     paths: { "text": "durandal/amd/text" }
 });

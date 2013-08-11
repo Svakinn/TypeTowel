@@ -1,4 +1,5 @@
 define(["require", "exports", 'services/logger'], function(require, exports, ___logger__) {
+    /// <reference path="../../Scripts/typings/knockout/knockout.d.ts" />
     var _logger = ___logger__;
 
     var ViewModel = (function () {
@@ -6,7 +7,6 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
             this.title = 'Home View';
         }
         ViewModel.prototype.activate = function () {
-            this.MyTitle = ko.observable(this.title + " with my ko title");
             _logger.logger.log('We are home now', null, 'home', true);
             return true;
         };
@@ -15,9 +15,9 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
     exports.ViewModel = ViewModel;
     exports.vm = new ViewModel();
 
-    exports.title = exports.vm.title;
+    //The Durandal plugin-interface variables
     exports.activate = function () {
         return exports.vm.activate();
     };
 });
-//@ sourceMappingURL=home.js.map
+//# sourceMappingURL=home.js.map
