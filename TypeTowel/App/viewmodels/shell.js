@@ -1,4 +1,3 @@
-/// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
 define(["require", "exports", 'durandal/plugins/router', 'services/logger', 'durandal/system'], function(require, exports, ___router__, ___logger__, ___system__) {
     var _router = ___router__;
     var _logger = ___logger__;

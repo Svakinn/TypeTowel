@@ -1,24 +1,23 @@
 /// <reference path="../../Scripts/typings/bootstrap/bootstrap.d.ts" />
-/// <reference path="../../Scripts/typings/knockout/knockout.d.ts" />
 
 import _logger = require('services/logger');
-import _system = require('durandal/system'); 
+import _system = require('durandal/system');
 
 export interface ICountry {
     id: string;
     name: KnockoutObservable<string>;
-    toolTip: KnockoutObservable<string>; 
+    toolTip: KnockoutObservable<string>;
 }
 
 //The typescript viewmodel class
-export class DetailsView { 
+export class DetailsView {
     constructor() {
         //Note that computeds and subscriptions should be initialized in constructor or activate function in typescript viewmodel class
         this.compTitle = ko.computed(function () {
             return this.title() + ' (computed)';
         }, this);
     }
-    
+
     public title: KnockoutObservable<string> = ko.observable('');
     public countries: KnockoutObservableArray<ICountry> = ko.observableArray();
     public compTitle: KnockoutComputed<string>; //See the constructor above
@@ -44,7 +43,7 @@ export class DetailsView {
         return true;
     }
     public viewAttached(view) {
-        this.activateToolTips(); 
+        this.activateToolTips();
     }
 }
 //Export oru viewmodel to the DOM as vm

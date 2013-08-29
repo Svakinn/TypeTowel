@@ -1,5 +1,4 @@
 define(["require", "exports", 'services/logger'], function(require, exports, ___logger__) {
-    /// <reference path="../../Scripts/typings/knockout/knockout.d.ts" />
     var _logger = ___logger__;
 
     var ViewModel = (function () {
@@ -7,7 +6,7 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
             this.title = 'Home View';
         }
         ViewModel.prototype.activate = function () {
-            _logger.logger.log('We are home now', null, 'home', true);
+            _logger.logger.log('We are at home now', null, 'home', true);
             return true;
         };
         return ViewModel;

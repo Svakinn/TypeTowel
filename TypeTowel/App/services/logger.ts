@@ -2,7 +2,7 @@
 /// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
 
 import _system = require('durandal/system');
-export class loggerClass { 
+export class loggerClass {
 
     public log(message: string, data: Object, source: string, showToast: boolean) {
         this.logIt(message, data, source, showToast, 'info');
@@ -24,6 +24,7 @@ export class loggerClass {
                 toastr.error(message);
             } else {
                 toastr.info(message);
+
             }
         }
     }

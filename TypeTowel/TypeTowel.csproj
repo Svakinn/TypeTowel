@@ -39,6 +39,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptGeneratesDeclarations>true</TypeScriptGeneratesDeclarations>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptGeneratesDeclarations>false</TypeScriptGeneratesDeclarations>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -46,7 +60,7 @@
     </Reference>
     <Reference Include="Breeze.WebApi, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Breeze.WebApi.1.4.0\lib\Breeze.WebApi.dll</HintPath>
+      <HintPath>..\packages\Breeze.WebApi.1.4.1\lib\Breeze.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -57,16 +71,16 @@
     </Reference>
     <Reference Include="Irony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Breeze.WebApi.1.4.0\lib\Irony.dll</HintPath>
+      <HintPath>..\packages\Breeze.WebApi.1.4.1\lib\Irony.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0-rc1\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.OData.5.6.0-rc1\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -87,7 +101,7 @@
     </Reference>
     <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\System.Spatial.5.6.0-rc1\lib\net40\System.Spatial.dll</HintPath>
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -206,41 +220,23 @@
     <Content Include="App\durandal\viewModel.js" />
     <Content Include="App\durandal\viewModelBinder.js" />
     <Content Include="App\durandal\widget.js" />
+    <TypeScriptCompile Include="App\services\logger.ts" />
+    <TypeScriptCompile Include="App\main.ts" />
     <Content Include="App\main.js">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
-    <Content Include="App\main.min.js">
-      <DependentUpon>main.ts</DependentUpon>
-    </Content>
-    <Content Include="App\main.ts" />
-    <Content Include="App\services\logger.js">
-      <DependentUpon>logger.ts</DependentUpon>
-    </Content>
-    <Content Include="App\services\logger.min.js">
-      <DependentUpon>logger.ts</DependentUpon>
-    </Content>
-    <Content Include="App\services\logger.ts" />
+    <TypeScriptCompile Include="App\viewmodels\details.ts" />
     <Content Include="App\viewmodels\details.js">
       <DependentUpon>details.ts</DependentUpon>
     </Content>
-    <Content Include="App\viewmodels\details.min.js">
-      <DependentUpon>details.ts</DependentUpon>
-    </Content>
-    <Content Include="App\viewmodels\details.ts" />
+    <TypeScriptCompile Include="App\viewmodels\home.ts" />
     <Content Include="App\viewmodels\home.js">
       <DependentUpon>home.ts</DependentUpon>
     </Content>
-    <Content Include="App\viewmodels\home.min.js">
-      <DependentUpon>home.ts</DependentUpon>
-    </Content>
-    <Content Include="App\viewmodels\home.ts" />
+    <TypeScriptCompile Include="App\viewmodels\shell.ts" />
     <Content Include="App\viewmodels\shell.js">
       <DependentUpon>shell.ts</DependentUpon>
     </Content>
-    <Content Include="App\viewmodels\shell.min.js">
-      <DependentUpon>shell.ts</DependentUpon>
-    </Content>
-    <Content Include="App\viewmodels\shell.ts" />
     <Content Include="App\views\details.html" />
     <Content Include="App\views\footer.html" />
     <Content Include="App\views\home.html" />
@@ -263,25 +259,10 @@
     <Content Include="Content\toastr.less" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="App\viewmodels\home.js.map">
-      <DependentUpon>home.ts</DependentUpon>
-    </Content>
-    <Content Include="App\viewmodels\details.js.map">
-      <DependentUpon>details.ts</DependentUpon>
-    </Content>
-    <Content Include="App\viewmodels\shell.js.map">
-      <DependentUpon>shell.ts</DependentUpon>
-    </Content>
-    <Content Include="App\main.js.map">
-      <DependentUpon>main.ts</DependentUpon>
-    </Content>
-    <Content Include="App\services\logger.js.map">
-      <DependentUpon>logger.ts</DependentUpon>
-    </Content>
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
-    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
@@ -297,10 +278,10 @@
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
     <Content Include="Scripts\typings\breeze\breeze-1.0.d.ts" />
+    <Content Include="Scripts\typings\breeze\breeze-1.2.d.ts" />
     <Content Include="Scripts\typings\breeze\breeze.d.ts" />
     <Content Include="Scripts\typings\durandal\durandal.d.ts" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
-    <Content Include="Scripts\typings\knockout\knockout.amd.d.ts" />
     <Content Include="Scripts\typings\knockout\knockout.d.ts" />
     <Content Include="Scripts\typings\modernizr\modernizr.d.ts" />
     <Content Include="Scripts\typings\q\Q.d.ts" />
@@ -354,7 +335,12 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.8\tools\Microsoft.Bcl.Build.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.                                                                                      
        Other similar extension points exist, see Microsoft.Common.targets.                                                                                                                
   <Target Name="BeforeBuild">                                                                                                                                                             

@@ -1,18 +1,43 @@
 Do you love the Hot Towel SPA template by John Papa ? 
-Do you like TypeScript ? 
-Would you like to implement your viewmodel classes of Hot Towel in TypeScript ? 
+Do you like TypeScript? 
+Would you like to implement your viewmodel classes of Hot Towel in TypeScript? 
 This project demonstrates how to do just that. It includes a blank Hot Towel project that has been converted to use TypeScript for the view models. 
 
 Requirements: 
-1) Visual studio 2012 or 2013
+1. Visual studio 2012 or 2013
+2. TypeScript, latest version, currently 0.9.1.1 
+3. TypeScript TypeScriptModuleKind option set to AMD (see below..)
 
-2) VS2012 Web Essentials plugin.  NOTE !! Latest version of Web Essentials, 2.9 has problems with Typescript AMD at the moment.
-Use older version i.e. 2.7: http://vswebessentials.com/nightly/webessentials2012-2.7.vsixor or the "Nightly builds"
-See: http://vswebessentials.com/download and follow instructions there to set-up the Nightly builds update into Visual studio.
+About Web Essentials:
+From version 3.9 of Web Essentials, it no longer supports TypeScript.
+This latest update of this project includes changes in the project file to battle this unfortunate change.
 
-3) Compile Typescript with AMD option to true.
-TypeScript must be configured to compile as AMD JavaScript.  To make sure, open Tools-Options in Visual Studio, then open Web Essentials section and set the "Use the AMD module" option to True.
+TypeScript working with Durandal requires TypeScript files to be compiled as AMD modules.
+Usable settings for TypeScript compile options are not currently available in VS2012.
 
-Finally;
+Following sections had to be injected in the project file to make this work:
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptGeneratesDeclarations>true</TypeScriptGeneratesDeclarations>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptGeneratesDeclarations>false</TypeScriptGeneratesDeclarations>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+
+and the bottom:
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
+
+The "TypeScriptModuleKind" option above is the key to compile the TypeScripts as AMD modules.
+
+Finally:
 Please do not update the Durandal or Bootstrap packages in this project (using NuGet Package Manager).
 The same applies for the current version of the HotTowel project template.  
+
+

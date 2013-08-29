@@ -1,5 +1,3 @@
-/// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
-
 import _router = require('durandal/plugins/router');
 import _logger = require('services/logger');
 import _system = require('durandal/system');
@@ -26,5 +24,3 @@ function log(msg, data, showToast) {
     _logger.logger.log(msg, data, _system.getModuleId(shell), showToast);
 }
 //#endregion
-
-

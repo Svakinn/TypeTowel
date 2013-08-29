@@ -1,5 +1,4 @@
 /// <reference path="../../Scripts/typings/bootstrap/bootstrap.d.ts" />
-/// <reference path="../../Scripts/typings/knockout/knockout.d.ts" />
 define(["require", "exports", 'services/logger'], function(require, exports, ___logger__) {
     var _logger = ___logger__;
     
