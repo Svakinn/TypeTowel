@@ -1,9 +1,9 @@
-import _logger = require('services/logger');
+import m_logger = require('services/logger');
 
 export class ViewModel {
-    title: string = 'Home View';
+    title: string = 'Home View'; 
     public activate() {
-        _logger.logger.log('We are at home now', null, 'home', true);
+        m_logger.logger.log('We are at home now', null, 'home', true);
         return true;
     }
 }

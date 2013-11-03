@@ -1,7 +1,7 @@
 /// <reference path="../../Scripts/typings/bootstrap/bootstrap.d.ts" />
 
-import _logger = require('services/logger');
-import _system = require('durandal/system');
+import m_logger = require('services/logger');
+import m_system = require('durandal/system');
 
 export interface ICountry {
     id: string;
@@ -37,7 +37,7 @@ export class DetailsView {
     //Implementation of Durandal interface within the viewmodel
     public activate() {
         this.title('My title');
-        _logger.logger.log('Details View Activated', null, 'details', true);
+        m_logger.logger.log('Details View Activated', null, 'details', true);
         this.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
         //Note: remember that when waiting for data i.e. from service query, the promise should be returned instead of the "true" value
         return true;

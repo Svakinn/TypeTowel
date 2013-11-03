@@ -4,8 +4,8 @@
     <id>Q</id>
     <version>0.9.6</version>
     <title>Q</title>
-    <authors>Kris Kowal,  Irakli Gozalishvili,  Domenic Denicola</authors>
-    <owners>Kris Kowal,  Irakli Gozalishvili,  Domenic Denicola</owners>
+    <authors>Kris Kowal, Irakli Gozalishvili, Domenic Denicola</authors>
+    <owners>Kris Kowal</owners>
     <licenseUrl>https://github.com/kriskowal/q/raw/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/kriskowal/q</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

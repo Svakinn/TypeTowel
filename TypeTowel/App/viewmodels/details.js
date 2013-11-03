@@ -1,6 +1,6 @@
 /// <reference path="../../Scripts/typings/bootstrap/bootstrap.d.ts" />
-define(["require", "exports", 'services/logger'], function(require, exports, ___logger__) {
-    var _logger = ___logger__;
+define(["require", "exports", 'services/logger'], function(require, exports, __m_logger__) {
+    var m_logger = __m_logger__;
     
 
     //The typescript viewmodel class
@@ -28,7 +28,7 @@ define(["require", "exports", 'services/logger'], function(require, exports, ___
         //Implementation of Durandal interface within the viewmodel
         DetailsView.prototype.activate = function () {
             this.title('My title');
-            _logger.logger.log('Details View Activated', null, 'details', true);
+            m_logger.logger.log('Details View Activated', null, 'details', true);
             this.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
 
             //Note: remember that when waiting for data i.e. from service query, the promise should be returned instead of the "true" value

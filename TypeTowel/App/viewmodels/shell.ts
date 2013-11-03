@@ -1,10 +1,10 @@
-import _router = require('durandal/plugins/router');
-import _logger = require('services/logger');
-import _system = require('durandal/system');
+import m_router = require('plugins/router');
+import m_logger = require('services/logger');
+import m_system = require('durandal/system');
 
 var shell = {
     activate: activate,
-    router: _router
+    router: m_router
 }
 return shell;
 
@@ -14,13 +14,27 @@ function activate() {
 }
 
 function boot() {
-    _router.mapNav('home');
-    _router.mapNav('details');
     log('Hot Towel SPA Loaded!', null, true);
-    return _router.activate('home');
+
+    m_router.on('router:route:not-found', function (fragment) {
+        logError('No Route Found', fragment, true);
+    });
+
+    var routes = [
+        { route: '', moduleId: 'home', title: 'Home', nav: 1 },
+        { route: 'details', moduleId: 'details', title: 'Details', nav: 2 }];
+
+    return m_router.makeRelative({ moduleId: 'viewmodels' }) // router will look here for viewmodels by convention
+        .map(routes)            // Map the routes
+        .buildNavigationModel() // Finds all nav routes and readies them
+        .activate();            // Activate the router
 }
 
 function log(msg, data, showToast) {
-    _logger.logger.log(msg, data, _system.getModuleId(shell), showToast);
+    m_logger.logger.log(msg, data, m_system.getModuleId(shell), showToast);
+}
+
+function logError(msg, data, showToast) {
+    m_logger.logger.logError(msg, data, m_system.getModuleId(shell), showToast);
 }
 //#endregion
