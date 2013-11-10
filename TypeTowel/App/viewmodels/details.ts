@@ -38,7 +38,10 @@ export class DetailsView {
     public activate() {
         this.title('My title');
         m_logger.logger.log('Details View Activated', null, 'details', true);
-        this.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
+        if (this.countries().length == 0) {
+            this.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
+        }
+        this.activateToolTips();
         //Note: remember that when waiting for data i.e. from service query, the promise should be returned instead of the "true" value
         return true;
     }
