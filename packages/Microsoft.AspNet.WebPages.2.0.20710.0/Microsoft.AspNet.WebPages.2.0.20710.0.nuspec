@@ -8,9 +8,9 @@
     <owners>Microsoft</owners>
     <licenseUrl>http://www.microsoft.com/web/webpi/eula/WebPages_2_eula_ENU.htm</licenseUrl>
     <projectUrl>http://www.asp.net/web-pages</projectUrl>
+    <iconUrl>https://download-codeplex.sec.s-msft.com/Download?ProjectName=aspnetwebstack&amp;DownloadId=360555</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>This package contains core runtime assemblies shared between ASP.NET MVC and ASP.NET Web Pages.</description>
-    <language>en-US</language>
     <tags>Microsoft AspNet WebPages AspNetWebPages</tags>
     <dependencies>
       <dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />

@@ -4,8 +4,8 @@
     <id>toastr</id>
     <version>1.2.2</version>
     <title>toastr</title>
-    <authors>John Papa,Hans Fjällemark</authors>
-    <owners>John Papa,Hans Fjällemark</owners>
+    <authors>John Papa, Hans Fjällemark</authors>
+    <owners>John Papa, Hans Fjällemark</owners>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <projectUrl>https://github.com/CodeSeven/toastr</projectUrl>
     <iconUrl>http://johnpapa.net/wp-content/images/toastr-icon.png</iconUrl>
@@ -26,7 +26,7 @@ Fixed clear() bug.
 Removed semver from file name.</releaseNotes>
     <copyright>Copyright © 2012 Hans Fjällemark &amp; John Papa.</copyright>
     <language>en-US</language>
-    <tags>toastr, toast, notification, dialog, jquery</tags>
+    <tags>toastr toast notification dialog jquery</tags>
     <dependencies>
       <dependency id="jQuery" version="1.6.3" />
     </dependencies>

@@ -8,9 +8,9 @@
     <owners>Microsoft</owners>
     <licenseUrl>http://www.microsoft.com/web/webpi/eula/MVC_4_eula_ENU.htm</licenseUrl>
     <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <iconUrl>https://download-codeplex.sec.s-msft.com/Download?ProjectName=aspnetwebstack&amp;DownloadId=360555</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>This package adds support for formatting and content negotiation to System.Net.Http. It includes support for JSON, XML, and form URL encoded data.</description>
-    <language>en-US</language>
     <tags>Microsoft AspNet WebApi AspNetWebApi HttpClient</tags>
     <dependencies>
       <dependency id="Microsoft.Net.Http" version="[2.0.20710.0, 2.1)" />

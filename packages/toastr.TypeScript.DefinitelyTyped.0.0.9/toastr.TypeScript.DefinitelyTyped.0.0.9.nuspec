@@ -3,7 +3,6 @@
   <metadata>
     <id>toastr.TypeScript.DefinitelyTyped</id>
     <version>0.0.9</version>
-    <title>toastr.TypeScript.DefinitelyTyped</title>
     <authors>Jason Jarrett</authors>
     <owners>Jason Jarrett</owners>
     <licenseUrl>https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT</licenseUrl>
@@ -13,7 +12,6 @@
     <description>TypeScript Definitions (d.ts) for toastr. Generated based off the DefinitelyTyped repository [git commit: d36023a1ac425fc020c624ae3af4625c2e67b138]. http://github.com/DefinitelyTyped</description>
     <releaseNotes />
     <copyright>Copyright 2013</copyright>
-    <language />
     <tags>TypeScript JavaScript</tags>
     <dependencies>
       <dependency id="jquery.TypeScript.DefinitelyTyped" />

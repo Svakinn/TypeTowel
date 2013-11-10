@@ -29,7 +29,10 @@ define(["require", "exports", 'services/logger'], function(require, exports, __m
         DetailsView.prototype.activate = function () {
             this.title('My title');
             m_logger.logger.log('Details View Activated', null, 'details', true);
-            this.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
+            if (this.countries().length == 0) {
+                this.countries.push({ id: 'IS', name: ko.observable('Iceland'), toolTip: ko.observable('Land of ice and fire') });
+            }
+            this.activateToolTips();
 
             //Note: remember that when waiting for data i.e. from service query, the promise should be returned instead of the "true" value
             return true;
@@ -48,7 +51,9 @@ define(["require", "exports", 'services/logger'], function(require, exports, __m
     exports.activate = function () {
         return exports.vm.activate();
     };
-    exports.viewAttached = function (view) {
+
+    //Note that in previous version of Durandal attached() was named viewAttached()
+    exports.attached = function (view) {
         exports.vm.viewAttached(view);
     };
 

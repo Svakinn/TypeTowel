@@ -3,7 +3,6 @@
   <metadata>
     <id>knockout.TypeScript.DefinitelyTyped</id>
     <version>0.3.5</version>
-    <title>knockout.TypeScript.DefinitelyTyped</title>
     <authors>Jason Jarrett</authors>
     <owners>Jason Jarrett</owners>
     <licenseUrl>https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT</licenseUrl>
@@ -13,7 +12,6 @@
     <description>TypeScript Definitions (d.ts) for knockout. Generated based off the DefinitelyTyped repository [git commit: 1bb113b03edcf975a68ee0cf936650b5b6e73aa6]. http://github.com/DefinitelyTyped</description>
     <releaseNotes />
     <copyright>Copyright 2013</copyright>
-    <language />
     <tags>TypeScript JavaScript</tags>
   </metadata>
 </package>

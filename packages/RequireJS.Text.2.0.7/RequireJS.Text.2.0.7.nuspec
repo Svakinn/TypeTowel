@@ -5,7 +5,7 @@
     <version>2.0.7</version>
     <title>Text Plugin for RequireJS</title>
     <authors>Victor Cavalcante</authors>
-    <owners>James Burke</owners>
+    <owners>Victor Cavalcante</owners>
     <licenseUrl>https://github.com/requirejs/text/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/requirejs/text</projectUrl>
     <iconUrl>http://requirejs.org/i/logo.png</iconUrl>

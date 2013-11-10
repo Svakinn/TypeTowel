@@ -6,7 +6,7 @@
     <authors>James Burke</authors>
     <owners>James Burke</owners>
     <licenseUrl>https://github.com/jrburke/requirejs/blob/master/LICENSE</licenseUrl>
-    <projectUrl>http://requirejs.org</projectUrl>
+    <projectUrl>http://requirejs.org/</projectUrl>
     <iconUrl>http://requirejs.org/i/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A JavaScript module loader.</description>

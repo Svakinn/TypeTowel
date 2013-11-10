@@ -16,4 +16,4 @@ export declare class DetailsView {
 }
 export declare var vm: DetailsView;
 export declare var activate: () => boolean;
-export declare var viewAttached: (view: any) => void;
+export declare var attached: (view: any) => void;

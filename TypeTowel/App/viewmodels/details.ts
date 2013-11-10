@@ -54,7 +54,8 @@ export var vm = new DetailsView();
 
 //The Durandal plugin-interface
 export var activate = function () { return vm.activate(); };
-export var viewAttached = function (view) { vm.viewAttached(view); }
+//Note that in previous version of Durandal attached() was named viewAttached()
+export var attached = function (view) { vm.viewAttached(view); }
 
 //Finally some timeout update to the countries to demonstrate knockout capabilities on updating observable data
 setTimeout(function () {

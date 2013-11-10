@@ -3,7 +3,6 @@
   <metadata>
     <id>durandal.TypeScript.DefinitelyTyped</id>
     <version>0.2.2</version>
-    <title>durandal.TypeScript.DefinitelyTyped</title>
     <authors>Jason Jarrett</authors>
     <owners>Jason Jarrett</owners>
     <licenseUrl>https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT</licenseUrl>
@@ -13,7 +12,6 @@
     <description>TypeScript Definitions (d.ts) for durandal. Generated based off the DefinitelyTyped repository [git commit: 5ede7ec37ccb70f2592c8f1895a06a4c7494678d]. http://github.com/DefinitelyTyped</description>
     <releaseNotes />
     <copyright>Copyright 2013</copyright>
-    <language />
     <tags>TypeScript JavaScript</tags>
     <dependencies>
       <dependency id="knockout.TypeScript.DefinitelyTyped" />
