@@ -20,6 +20,10 @@ Requirements:
 Note:
 -----
 This project now is based on Hot Towel VERSION 1.1 
+
+Split Towel
+-----------
+See the sister project SplitTowel for more features including WebApi3, Bootstrap3, static html client, cors handling and more.
  
 
 
