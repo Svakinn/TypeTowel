@@ -1,6 +1,4 @@
-define(["require", "exports", 'services/logger'], function(require, exports, __m_logger__) {
-    var m_logger = __m_logger__;
-
+define(["require", "exports", 'services/logger'], function(require, exports, m_logger) {
     var ViewModel = (function () {
         function ViewModel() {
             this.title = 'Home View';

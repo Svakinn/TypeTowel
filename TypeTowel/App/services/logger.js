@@ -1,7 +1,6 @@
 /// <reference path="../../Scripts/typings/toastr/toastr.d.ts" />
 /// <reference path="../../Scripts/typings/durandal/durandal.d.ts" />
-define(["require", "exports", 'durandal/system'], function(require, exports, ___system__) {
-    var _system = ___system__;
+define(["require", "exports", 'durandal/system'], function(require, exports, _system) {
     var loggerClass = (function () {
         function loggerClass() {
         }

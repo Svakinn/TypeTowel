@@ -1,6 +1,12 @@
-/// <reference path="../Scripts/typings/knockout/knockout.amd.d.ts" />
+/// <reference path="../Scripts/typings/knockout/knockout.d.ts" />
 /// <reference path="../Scripts/typings/toastr/toastr.d.ts" />
-/// <reference path="../Scripts/typings/requirejs/require.d.ts" />
+///// <reference path="../Scripts/typings/requirejs/require.d.ts" />
+
+// Since current version of require.d.ts does not support deifne using function() and KnockoutStatic as last paremeter,
+// we use "declare" to make typescript compiler ignore the define statements below
+// This trick can be used in typescript whenever typeings are missing or not up to date with the use you want.
+declare var define;
+declare var require;
  
 // Maps the files so Durandal knows where to find these.
 require.config({
@@ -12,10 +18,7 @@ require.config({
     }
 });
 
-// Since current version of require.d.ts does not support deifne using function() and KnockoutStatic as last paremeter,
-// we use "declare" to make typescript compiler ignore the define statements below
-// This trick can be used in typescript whenever typeings are missing or not up to date with the use you want.
-declare var define; 
+
 
 // Durandal 2.x assumes no global libraries. It will ship expecting 
 // Knockout and jQuery to be defined with requirejs. .NET 

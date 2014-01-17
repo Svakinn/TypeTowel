@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Moment.js</id>
+    <version>2.5.0</version>
+    <authors>Tim Wood</authors>
+    <owners>Tim Wood</owners>
+    <licenseUrl>https://raw.github.com/timrwood/moment/master/LICENSE</licenseUrl>
+    <projectUrl>http://momentjs.com/</projectUrl>
+    <iconUrl>http://pbs.twimg.com/profile_images/2907663153/dc29a7aa56e686932ac4fde6f2353d1f_normal.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A lightweight javascript date library for parsing, manipulating, and formatting dates.</description>
+    <releaseNotes>- New languages
+                - Luxemburish (lb)
+                - Serbian (rs)
+                - Tamil (ta)
+                - Macedonian (mk)
+            - Features
+                - Add quarter getter and format token Q
+                - Strict parsing now respects number of digits per token
+                - Add jspm support
+                - Improve zone parsing
+                - Support merideam parsing in Korean
+            - 22 Bugfixes</releaseNotes>
+    <tags>JavaScript date time browser node.js</tags>
+  </metadata>
+</package>

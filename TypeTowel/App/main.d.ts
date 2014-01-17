@@ -1,4 +1,5 @@
-/// <reference path="../Scripts/typings/knockout/knockout.amd.d.ts" />
+/// <reference path="../Scripts/typings/knockout/knockout.d.ts" />
 /// <reference path="../Scripts/typings/toastr/toastr.d.ts" />
-/// <reference path="../Scripts/typings/requirejs/require.d.ts" />
-declare function boot(app, viewLocator, system, router, logger): void;
+declare var define: any;
+declare var require: any;
+declare function boot(app: any, viewLocator: any, system: any, router: any, logger: any): void;

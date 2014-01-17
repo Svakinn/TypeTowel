@@ -15,7 +15,7 @@ Requirements:
 -------------
 
 1. Visual studio 2012
-2. TypeScript, latest version, currently 0.9.1.1 
+2. TypeScript, latest version, currently 0.9.5
 
 Note:
 -----

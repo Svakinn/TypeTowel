@@ -12,7 +12,7 @@ export declare class DetailsView {
     public clickUpdatTitle(newTitle: string): void;
     public activateToolTips(): void;
     public activate(): boolean;
-    public viewAttached(view): void;
+    public viewAttached(view: any): void;
 }
 export declare var vm: DetailsView;
 export declare var activate: () => boolean;

@@ -19,7 +19,7 @@ export class DetailsView {
     }
 
     public title: KnockoutObservable<string> = ko.observable('');
-    public countries: KnockoutObservableArray<ICountry> = ko.observableArray();
+    public countries: KnockoutObservableArray<ICountry> = ko.observableArray<ICountry>();
     public compTitle: KnockoutComputed<string>; //See the constructor above
 
     //Remember to include the viewmodel as the first parameter of the knockout binding to have it function as a member function of the class
